@@ -89,7 +89,7 @@ let add_basename
   if is_editor_temporary_files basename then map
   else
   let info = ref Bsb_db.Impl in
-  let syntax_kind = ref Bsb_db.Ml in
+  let syntax_kind = ref (Ext_file_extensions.Ml : Ext_file_extensions.syntax_kind) in
   let invalid_suffix = ref false in
   let file_suffix = Ext_filename.get_extension_maybe basename in
   (match ()  with
